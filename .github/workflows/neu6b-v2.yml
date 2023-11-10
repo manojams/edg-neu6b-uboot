@@ -30,7 +30,7 @@ jobs:
             git clone https://github.com/manojams/edg-neu6b-uboot.git -b main
             git clone https://github.com/rockchip-linux/rkbin.git
             export ARCH=arm64 ; export CROSS_COMPILE=aarch64-linux-gnu-	
-            cd u-boot	
+            cd edg-neu6b-uboot
             export BL31=../rkbin/bin/rk35/rk3588_bl31_v1.40.elf
             export ROCKCHIP_TPL=../rkbin/bin/rk35/rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.12.bin 
             make neu6b-io-rk3588_defconfig
@@ -41,7 +41,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            edgble-u-boot_neu6b-v2/u-boot/idbloader.img
-            edgble-u-boot_neu6b-v2/u-boot/u-boot.itb
+            edgble-u-boot_neu6b-v2/edg-neu6b-uboot/u-boot.itb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
