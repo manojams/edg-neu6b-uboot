@@ -27,7 +27,7 @@ jobs:
       - name: Clone U-boot repo
         run: |	 
             cd edgble-u-boot_neu6b-v2
-            git clone https://github.com/edgeble/u-boot.git -b neu6b-v2
+            git clone https://github.com/manojams/edg-neu6b-uboot.git -b main
             git clone https://github.com/rockchip-linux/rkbin.git
             export ARCH=arm64 ; export CROSS_COMPILE=aarch64-linux-gnu-	
             cd u-boot	
